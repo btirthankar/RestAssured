@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/tirth/IdeaProjects/RestAssured/src/test/java/practiceRessured/reqres/CreateEmp.java">
+        <classes>
+            <class name="practiceRessured.reqres.CreateEmp">
+                <methods>
+                    <include name="createNewEmp"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
