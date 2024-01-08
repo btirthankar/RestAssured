@@ -15,14 +15,8 @@ public class CreateEmp {
 
     @Test
     public void createNewEmp() throws IOException {
-
-        String env = System.getProperty("env") == null ? "qa" : System.getProperty("env");
-        Map<String,String> data = JsonUtils.getJsonData(env+"/getUrl.json");
-
-        String endPoint = data.get("createEndPoint");
-        Map<String, Object> payload= Payloads.getCreatePayload("Sumana", "Senior Associate");
-
-        Response response = RestUtils.performPost(endPoint,payload, new HashMap<>());
+        Map<String, Object> payload = Payloads.getCreatePayload("Tirtha","lead");
+        Response response = ReqResAPI.createEmp(payload);
         Assert.assertEquals(response.statusCode(),201);
 
     }
